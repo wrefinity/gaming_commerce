@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "NodeNext",
+        "moduleResolution": "node",
+        "allowJs": true, 
+        "noImplicitAny": true,
+        "sourceMap": true,
+        "baseUrl": "src",
+        "outDir": "dist",
+        "types": ["node", "express", "./express_cus"],
+        "typeRoots": [
+            "./@types",
+            "./node_modules/@types",
+        ],
+    },
+    "include": [
+        "src/**/*",
+    ],
+}
