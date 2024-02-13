@@ -1,6 +1,6 @@
 # Gaming Commerce
 
-A mern stack application to enable buyers of PES utilities purchase their products.
+A mern stack application to enable buyers of PES utilities purchase their products. Based in Nigeria
 
 
 # Getting Started client
