@@ -1,10 +1,10 @@
+import * as express from 'express';
+import {IUser} from "../../src/models/users";
 
-import {userSchema} from "../../src/models/users";
-
-declare global{
+declare global {
     namespace Express {
-        interface Request {
-            user?: userSchema
+        export interface Request {
+            user?: IUser
         }
     }
 }

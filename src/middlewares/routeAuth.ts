@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from "express";
 import AuthenticatedRequest from "../utils/extended";
 import CustomError from "../utils/customError";
 import JwtAuth from "./jswt";
-import { getUserById } from "../models/users";
+import { IUser, getUserById } from "../models/users";
 
 //  authorization : access token
 class AuthenticateUser {
@@ -37,7 +37,7 @@ class AuthenticateUser {
 
     public checkUserAuth = (req: AuthenticatedRequest, res: Response, next: NextFunction) => {
         try {
-            const user = req.user;
+            const user:IUser = req.user;
             if (!user)
                 return next(new CustomError("Authentication required", 403));
             next();

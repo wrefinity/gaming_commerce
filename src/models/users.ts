@@ -1,4 +1,4 @@
-import mongoose, { Document } from "mongoose";
+import mongoose, { Document, Schema } from "mongoose";
 import bcrypt from "bcryptjs"
 
 export interface IUser extends Document {
@@ -16,7 +16,7 @@ export enum UserStatus {
     ACTIVE = "Active"
 }
 
-export const userSchema = new mongoose.Schema<IUser>({
+export const userSchema: Schema<IUser> = new mongoose.Schema<IUser>({
     username: { type: String, required: true },
     email: { type: String, required: true },
     password: { type: String, required: true },
@@ -49,4 +49,5 @@ export const updateUsers = async(id:string, values: Record<string, any>) => awai
 export const createUser = (val: Record<string, any>) => new User(val).save().then(
     user => user.toObject()
 )
+
 export default User;

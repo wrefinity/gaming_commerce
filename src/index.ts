@@ -47,5 +47,5 @@ class Server {
 }
 
 const server = new Server().middlewareSetUp();
-server.listen(process.env.SERVER_PORT ||
-  5050, () => console.log("Server running on port 5050"));
+const PORT  =  process.env.SERVER_PORT || 5050
+server.listen(PORT, () => console.log(`Server running on port ${PORT}`));

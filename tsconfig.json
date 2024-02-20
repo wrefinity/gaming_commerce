@@ -1,13 +1,13 @@
 {
     "compilerOptions": {
         "module": "NodeNext",
-        "moduleResolution": "node",
+        "moduleResolution": "NodeNext",
         "allowJs": true, 
         "noImplicitAny": true,
         "sourceMap": true,
         "baseUrl": "src",
         "outDir": "dist",
-        "types": ["node", "express", "./express_cus"],
+        "types": ["node", "express"],
         "typeRoots": [
             "./@types",
             "./node_modules/@types",
